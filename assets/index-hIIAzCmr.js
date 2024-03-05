@@ -6,7 +6,7 @@
   <div class="layer Heading">
         ZAHI ZUHAIR <br> <h6>DEVELOPER</h6>
   </div>
-  <div class="layer me"><img src="/images/me1.png" alt=""></div>
+  <div class="layer me"><img src="./images/me.png" alt=""></div>
   <div class="layer i_4">
     <canvas class="rain"></canvas>
   </div>

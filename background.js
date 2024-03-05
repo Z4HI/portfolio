@@ -3,8 +3,8 @@
 export default function backgroundPage(){
 
 const sitewrapper = document.querySelector(".site-wrapper")
-const body = document.querySelector('body')
-
+const me = document.createElement('img')
+me.src = "./images/mee.png"
 const bg = document.createElement('div')
 bg.classList.add('background')
 bg.innerHTML = 
@@ -17,7 +17,7 @@ bg.innerHTML =
   <div class="layer Heading">
         ZAHI ZUHAIR <br> <h6>DEVELOPER</h6>
   </div>
-  <div class="layer me"><img src="/images/me1.png" alt=""></div>
+  <div class="layer me"><img src="./images/mee.png" alt=""></div>
   <div class="layer i_4">
     <canvas class="rain"></canvas>
   </div>

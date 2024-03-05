@@ -3,11 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script src="https://kit.fontawesome.com/dbb7381a19.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boiler</title>
+    <title>Portfolio</title>
   </head>
   <body>
-    <div id="app"></div>
+    <Header>
+      <ul>
+        <li>GitHub</li>
+        <li>Twitter</li>
+        <li>LinkedIn</li>
+      </ul>
+      <div class="pages">
+        <ul>
+          <li>HOME</li>
+          <li>SKILLS</li>
+          <li>PROJECTS</li>
+          <li>CONTACT</li>
+        </ul>
+      </div>
+      <div class="light">
+        <i class="fa-solid fa-lightbulb"></i>
+      </div>
+    </Header>
+    <div class="preloader">
+      <div class="circle"></div>
+        <p class="ploader">Loading</p>
+    </div>
+    <div class="site-wrapper"></div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

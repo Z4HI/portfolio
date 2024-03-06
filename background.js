@@ -1,7 +1,7 @@
 
-
 export default function backgroundPage(){
 
+const meImageURL = new URL('./images/me.png',import.meta.url)
 const sitewrapper = document.querySelector(".site-wrapper")
 const me = document.createElement('img')
 me.src = "./images/mee.png"
@@ -17,7 +17,7 @@ bg.innerHTML =
   <div class="layer Heading">
         ZAHI ZUHAIR <br> <h6>DEVELOPER</h6>
   </div>
-  <div class="layer me"><img src="./images/mee.png" alt=""></div>
+  <div class="layer me"><img src="${meImageURL}" class = "meIMG" alt=""></div>
   <div class="layer i_4">
     <canvas class="rain"></canvas>
   </div>
@@ -27,10 +27,10 @@ bg.innerHTML =
   <div class="layer i_7">
     <div class="nav">
       <ul>
-        <li>ABOUT ME</li>
-        <li>SKILLS</li>
-        <li>PROJECTS</li>
-        <li>CONTACT</li>
+        <li><span>ABOUT ME</span></li>
+        <li><span>SKILLS</span></li>
+        <li><span>PROJECTS</span></li>
+        <li><span>CONTACT</span></li>
       </ul>
       </div>
   </div>

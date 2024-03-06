@@ -27,7 +27,7 @@ DarkModeToggle.addEventListener('click',()=>{
 
     body.classList.toggle('mode')
     document.querySelector('.nav').classList.toggle('light')
-
+    document.querySelector('.i_1').classList.toggle('light')
 })
 
 

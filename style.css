@@ -42,6 +42,20 @@ Header ul{
     list-style: none;
 }
 
+Header ul i{
+    font-size: 25px;
+
+}
+#git:hover{
+    color:darkslateblue;
+}
+#twitter:hover{
+    color:deepskyblue;
+}
+#linkedin:hover{
+    color:cornflowerblue;
+}
+
 .pages {
     width: 30%;
     background-color: red;
@@ -59,10 +73,20 @@ Header ul{
 .pages ul li:hover{
 color: black;
 }
+.light{
+    box-shadow: 0 0 40px black;
+    
+}
+.light i{
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+}
 .light i:hover{
     cursor: pointer;
     color: yellow;
+    font-size: 30px;
     text-shadow: 0 0 10px yellow, 0 0 15px white;
+    
 }
 
 Header ul li{
@@ -70,7 +94,6 @@ Header ul li{
 }
 Header ul li:hover{
     transform: scale(1.2);
-    color: red;
     cursor: pointer;
 }
 
@@ -121,8 +144,6 @@ overflow: hidden;
 
 }
 
-
-
 .layers_container{
 margin-top: 10vh;
 height: 90vh;
@@ -143,7 +164,7 @@ transform: rotateY(var(--move-x)) rotateX(var(--move-y));
     border-radius: 60px;
     background-image: url(./images/layer-1.jpg);
     transform: translateZ(-300px);
-    border: solid 5px white;
+    border: solid 10px white;
     
 }
 .i_2{
@@ -155,24 +176,24 @@ transform: rotateY(var(--move-x)) rotateX(var(--move-y));
     transform:translateZ(10px) rotate(100deg) translateX(20%);
 }
 .Heading{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
     color: white;
-    text-align: center;
-    transform:translateY(-170px) translateZ(40px);
+    transform:translateY(-170px) translateZ(40px) translateX(5vw);
     font-size: 70px;
     line-height: .8;
     text-shadow:0 0 15px #0b1101;
     z-index: 5555555;
+
 }
 .Heading:hover{
     cursor: pointer !important;
     z-index: 555555 !important;
     color:red;
 }
-
 .me{
 
     filter: drop-shadow(0px 0px 50px rgb(16, 27, 15));
@@ -195,7 +216,7 @@ transform: rotateY(var(--move-x)) rotateX(var(--move-y));
 }
 .i_6{
     background-image: url(./images/layer-6.png);
-    transform: translateZ(10px);
+    transform: translateZ(270px);
 }
 
 .i_7{
@@ -205,21 +226,19 @@ transform: rotateY(var(--move-x)) rotateX(var(--move-y));
 
 .nav{
     position: absolute;
-    height: 300px;
-    width: 300px;
-    border-radius: 20px;
+    height: 250px;
+    width: 250px;
     background-color: white;
     margin-top: 10%;
     margin-left: 15%; 
-    font-size: 10px;
-    transform: translateZ(400px);
-    border: solid 5px white;
+    transform: translateZ(900px);
     box-shadow: 0 0 20px white;
-    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
 }
-.light{
-    box-shadow: 0 0 10px black;
-}
+
 
 .nav ul{
     height: 100%;
@@ -227,23 +246,50 @@ transform: rotateY(var(--move-x)) rotateX(var(--move-y));
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    padding: 10px;
+    align-items: center;
     list-style: none;
     font-size: 20px;
+    line-height: 0px;
 }
 
 .nav ul li{
-    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    
- 
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    position: relative;
+    border-left: 10px solid green;
+    margin: 3px;
+}
+
+.nav ul li::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    left: 0;
+    height: 100%;
+    background-color: green;
+    transition: 0.5s;
+    transform: scale(0);
+    transform-origin: left;
+}
+.nav ul li:hover::before{
+    transform: scale(1);
+}
+.nav ul li span{
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition:all 0.5s ease in;
 }
 .nav ul li:hover{
-    color: green;
-    text-shadow: 0 0 10px white;
-    
+   left: 10px; 
 }
 .AboutMe{
     height: 100vh;
@@ -274,12 +320,16 @@ transform: rotateY(var(--move-x)) rotateX(var(--move-y));
 @media screen and (max-width:500px){
     
     .nav{
-        display: none;
+        left: 50%;
+        height: 150px;
+        width: 150px;
+        
+    }
+    .i_2{
+        transform: translateZ(-10px);
     }
   .Heading{
-    width: 400px;
-    left: auto;
-    right: auto;
+    font-size: 50px;
   }
 
   .pages ul{
